@@ -3,6 +3,6 @@ RSpec.configure do |config|
 
   def csv_file(file_name)
     file_name = "#{file_name}.csv" unless File.extname(file_name) == ".csv"
-    File.read(File.join("examples", file_name))
+    File.join("examples", file_name)
   end
 end
