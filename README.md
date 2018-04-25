@@ -1,4 +1,22 @@
-Your task is to write a CSV (Comma Separated Values) parser.
+## So you want to write a CSV parser
+
+#### Setup
+
+* Clone this repo:
+  ```
+  git clone https://github.com/phiggins/phiggins_coding_challenge.git
+  ```
+
+* Test your setup:
+  ```
+  cd phiggins_ada_pairing
+  ./script/test
+  ```
+
+* If you see a message saying tests ran successfully, you're ready to go!
+
+
+#### What?
 
 CSV is a plain text data format for storing tabular data. The files usually end with the `.csv` extension, and a typical CSV file might look like this:
 
@@ -19,15 +37,14 @@ For more information about the CSV format:
 #### Steps:
 
 1. Write some code that can parse the sample CSV file above. Test file: dogs.csv
+   One way this could work would be to write a method that does the following:
 
-  One way this could work would be to write a method that does the following:  
-
-  ```
-  >> csv_data = File.read("dogs.csv") ; csv_data.length
-  => 97
-  >> csv_parser(csv_data)
-  => [["name", "breed", "weight"], ["Francis", "Samoyed", "32"], ["Kieran", "Lab", "90"], ["Renata", "Coonhound", "29"], ["Ving", "Boxer", "51"], ["Brian", "Lab", "51"]]
-  ```
+   ```
+   >> csv_data = File.read("dogs.csv") ; csv_data.length
+   => 97
+   >> csv_parser(csv_data)
+   => [["name", "breed", "weight"], ["Francis", "Samoyed", "32"], ["Kieran", "Lab", "90"], ["Renata", "Coonhound", "29"], ["Ving", "Boxer", "51"], ["Brian", "Lab", "51"]]
+   ```
 
 1. While the C in CSV stands for comma, not all CSV files use `,` as the delimiter between values in a row. Some common alternatives are tabs (`\t`) or spaces (` `). Modify your parser so that the caller of your code can specify an alternative delimiter. Test file: dinosaurs.csv
 
