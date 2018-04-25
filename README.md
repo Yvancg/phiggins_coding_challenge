@@ -29,6 +29,8 @@ Ving,Boxer,51
 Brian,Lab,51
 ```
 
+The CSV above is from [examples/dogs.csv](./examples/dogs.csv)
+
 For more information about the CSV format:
 * [Wikipedia](https://en.wikipedia.org/wiki/Comma-separated_values)
 * [Official spec (RFC 4180)](https://tools.ietf.org/html/rfc4180)
@@ -36,8 +38,8 @@ For more information about the CSV format:
 
 #### Steps:
 
-1. Write some code that can parse the sample CSV file above. Test file: dogs.csv
-   One way this could work would be to write a method that does the following:
+1. Write some code that can parse the sample CSV file above. An example of the desired behavior is below. Test file: dogs.csv
+
 
    ```
    >> csv_data = File.read("dogs.csv") ; csv_data.length
